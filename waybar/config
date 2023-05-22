@@ -1,0 +1,64 @@
+{
+	"layer": "top",
+	"height": 30,
+	"spacing": 7,
+	"margin-top": 10,
+	"margin-right": 10,
+	"margin-left": 10,
+	"modules-left": ["custom/launcher", "wlr/workspaces"],
+	"modules-center": ["cpu", "memory", "clock", "battery"],
+	"modules-right": ["custom/wifi", "custom/power-menu"],
+	"custom/launcher": {
+        "format": "🌈",
+        "on-click": "sh ~/.config/waybar/scripts/launcher.sh",
+    },
+	"wlr/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "urgent": "",
+        "active": "",
+        "default": ""
+      }
+    },
+	"battery": {
+		"states": {
+          "warning": 25,
+          "critical": 15
+      	},
+		"format": "{icon}   {capacity}%",
+		"format-charging": "<span font-family='Font Awesome 6 Free'></span> {capacity}%",
+		"format-full": "  full",
+		"format-plugged": "  {capacity}%",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"memory": {
+        "interval": 30,
+        "format-alt": "  {}%",
+        "format":"  {used:0.1f} GB",
+        "max-length": 10,
+    },
+    "cpu": {
+      "interval": 10,
+      "format": " {}%",
+      "max-length": 10,
+      "on-click": "",
+    },
+	"clock": {
+		"format-alt": "   </span>{:%A, %b %d}",
+		"format": "<span>  </span>{:%I : %M %p}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+	},
+	"custom/wifi": {
+		"format": "  Disconnect"
+	},
+	"custom/power-menu": {
+        "format": "⏻",
+        "on-click": "sh ~/.config/waybar/scripts/powermenu.sh",
+    },
+}
