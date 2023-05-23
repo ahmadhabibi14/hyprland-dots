@@ -1,64 +1,68 @@
 {
 	"layer": "top",
-	"height": 30,
-	"spacing": 7,
-	"margin-top": 10,
-	"margin-right": 10,
-	"margin-left": 10,
-	"modules-left": ["custom/launcher", "wlr/workspaces"],
-	"modules-center": ["cpu", "memory", "clock", "battery"],
-	"modules-right": ["custom/wifi", "custom/power-menu"],
+	"height": 40,
+	"spacing": 1,
+	"modules-left": ["custom/launcher", "custom/separator", "cpu", "memory"],
+	"modules-center": ["wlr/workspaces"],
+	"modules-right": ["network", "battery", "clock", "custom/separator", "custom/power-menu"],
+   "custom/separator": {
+      "format": "<span color='#C7C7C7'>|</span>"
+   },
 	"custom/launcher": {
-        "format": "🌈",
-        "on-click": "sh ~/.config/waybar/scripts/launcher.sh",
-    },
+      "format": "󰊠 ",
+      "on-click": "sh ~/.config/waybar/scripts/launcher.sh",
+   },
 	"wlr/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "urgent": "",
-        "active": "",
-        "default": ""
+         "1": "",
+         "2": "",
+         "3": "",
+         "4": "",
+         "5": "",
+         "urgent": "",
+         "active": "",
+         "default": ""
       }
-    },
+   },
 	"battery": {
 		"states": {
-          "warning": 25,
-          "critical": 15
-      	},
-		"format": "{icon}   {capacity}%",
-		"format-charging": "<span font-family='Font Awesome 6 Free'></span> {capacity}%",
+         "warning": 25,
+         "critical": 15
+      },
+		"format": "<span color='#AAD94C'>{icon}</span>    {capacity}%",
+		"format-charging": "<span color='#AAD94C'></span>  {capacity}%",
 		"format-full": "  full",
 		"format-plugged": "  {capacity}%",
 		"format-icons": ["", "", "", "", ""]
 	},
 	"memory": {
-        "interval": 30,
-        "format-alt": "  {}%",
-        "format":"  {used:0.1f} GB",
-        "max-length": 10,
-    },
-    "cpu": {
+      "interval": 30,
+      "format-alt": "<span color='#A282C7'></span>   {}%",
+      "format":"<span color='#A282C7'></span>   {used:0.1f} GB",
+      "max-length": 10,
+   },
+   "cpu": {
       "interval": 10,
-      "format": " {}%",
+      "format": "<span color='#AAD94C'></span>    {}%",
       "max-length": 10,
       "on-click": "",
-    },
+   },
 	"clock": {
-		"format-alt": "   </span>{:%A, %b %d}",
-		"format": "<span>  </span>{:%I : %M %p}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"format": "<span color='#2EA2DB'></span>   {:%I : %M %p}",
+		"format-alt": "<span color='#2EA2DB'></span>   {:%A, %d %b %Y}",
+      "tooltip-format": "<tt>{calendar}</tt>",
 	},
-	"custom/wifi": {
-		"format": "  Disconnect"
-	},
+	"network": {
+		"interface": "wlan0",
+      "format-wifi": "<span color='#92E7CB'></span>    {essid}",
+      "format-ethernet": " wired",
+      "format-disconnected": "  Disconnected",
+      "on-click": "sh ~/.config/waybar/scripts/network.sh",
+   },
 	"custom/power-menu": {
-        "format": "⏻",
-        "on-click": "sh ~/.config/waybar/scripts/powermenu.sh",
-    },
+      "format": "⏻",
+      "on-click": "sh ~/.config/waybar/scripts/powermenu.sh",
+   }
 }
