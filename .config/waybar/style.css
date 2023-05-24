@@ -73,7 +73,7 @@ window#waybar.hidden {
 
 #custom-launcher {
   font-size: 17px;
-  color: #2EA2DB;
+  color: #A282C7;
   padding-left: 13px;
 }
 
@@ -113,15 +113,15 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: rgba(30, 34, 42, 0.5);
-    color: #abb2bf;
+/*    background-color: rgba(30, 34, 42, 0.5);*/
+    color: #F25056;
   }
 }
 
-#battery {
+/* #battery {
 }
 #battery.full {
-}
+} */
 
 #battery.critical:not(.charging) {
   color: #F25056;

@@ -1,9 +1,9 @@
 configuration {
-	font:							"Iosevka Nerd Font 10";
+	font:							"Open Sans 10";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
-    display-drun: 					"";
-    drun-display-format:            "{name}";
+    display-dmenu: 					" ";
+    dmenu-display-format:            "{name}";
     disable-history:                false;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
@@ -14,31 +14,30 @@ configuration {
 
 window {
     transparency:                   "real";
-    background-color:               @bg;
+    background-color:               @al;
     text-color:                     @fg;
-	border:							0px 0px 0px 0px;
-	border-color:					@ac;
-    border-radius:                  0px;
-	width:							400px;
+	border:							2px;
+	border-color:					@mg;
+    border-radius:                  8px;
+	width:							350px;
+    height:                         400px;
     location:                       center;
-    x-offset:                       0;
-    y-offset:                       0;
+    x-offset:                       420;
+    y-offset:                       -134;
 }
 
 prompt {
     enabled: 						true;
 	padding: 						0px 0px 0px 10px;
-	background-color: 				@bga;
+	background-color: 				@al;
 	text-color: 					@fg;
 }
 
 textbox-prompt-colon {
-	padding: 						0px;
-	background-color: 				@bga;
-	text-color: 					@ac;
+	background-color: 				transparent;
+	text-color: 					@bga;
 	expand: false;
-	str: "";
-	font:							"feather 12";
+	str: "  ";
 }
 
 entry {
@@ -47,32 +46,34 @@ entry {
     placeholder-color:              @fg;
     expand:                         true;
     horizontal-align:               0;
-    placeholder:                    "Search...";
+    placeholder:                    "Search Wi-Fi...";
 	padding: 						0px 0px 0px 5px;
     blink:                          true;
 }
 
 inputbar {
-	children: 						[ textbox-prompt-colon, prompt ];
-    background-color:               @bga;
+	children: 						[ textbox-prompt-colon, entry ];
+    background-color:               @al;
     text-color:                     @fg;
     expand:                         false;
-	border:							0px 0px 1px 0px;
+	border:							0px 0px 2px 0px;
     border-radius:                  0px;
-	border-color:					@se;
+	border-color:					@mg;
     margin:                         0px;
     padding:                        10px;
 }
 
 listview {
+    enabled:                        true;
     background-color:               @al;
-    padding:                        0px;
+    padding:                        5px;
     columns:                        1;
     lines:                          8;
     spacing:                        5px;
     cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
+    hide-scrollbar:                 true;
 }
 
 mainbox {
@@ -86,33 +87,30 @@ mainbox {
 }
 
 element {
-    background-color:               @al;
+    hide-scrollbar:                 true;
+    background-color:               @bg;
     text-color:                     @fg;
-    orientation:                    horizontal;
-    border-radius:                  0px;
-	padding: 						8px 8px 8px -15px;
+    border-radius:                  8px;
 }
 
 element-icon {
-    background-color:               transparent;
-    text-color:               		inherit;
-    size:                           24px;
-    border:                         0px;
+    enabled:                        false;
 }
 
 element-text {
-    background-color:               transparent;
-    text-color:               		inherit;
+    hide-scrollbar:                 true;
+    background-color:               @al;
+    text-color:               	    @fg;
     expand:                         true;
-    horizontal-align:               0;
-    vertical-align:                 0.5;
-    margin:                         0px 2.5px 0px 2.5px;
+    border:                         1px;
+    border-color:                   #0A0B11;
+    border-radius:                  8px;
+    padding:                        8px 12px;
 }
 
-element selected {
-    background-color:               @se;
+element-text selected {
+    background-color:               @mg;
     text-color:                     @bg;
-	border:							0px 0px 0px 0px;
-    border-radius:                  0px;
-    border-color:                  	@ac;
+    border-color:                   @mg;
+    border-radius:                  8px;
 }

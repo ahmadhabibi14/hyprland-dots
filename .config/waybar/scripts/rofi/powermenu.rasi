@@ -21,8 +21,8 @@ window {
     border-radius:                  8px;
 	width:							200px;
     location:                       center;
-    x-offset:                       572;
-    y-offset:                       -222;
+    x-offset:                       573;
+    y-offset:                       -228;
 }
 
 prompt {

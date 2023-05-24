@@ -1,6 +1,6 @@
 # Hyprland Desktop Customization
 
-![My Dotties](/screenshots/001.png)
+![My Dotties](/screenshots/002.png)
 
 
 - Black `#0A0B11`

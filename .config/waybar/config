@@ -1,0 +1,118 @@
+{
+	"layer": "top",
+   "position": "bottom",
+	"height": 40,
+	"spacing": 1,
+	"modules-left": ["custom/launcher", "custom/separator", "cpu", "disk", "memory", "backlight", "temperature",],
+	"modules-center": ["wlr/workspaces"],
+	"modules-right": ["network", "pulseaudio", "battery", "clock", "custom/separator", "custom/power-menu"],
+   "custom/separator": {
+      "format": "<span color='#C7C7C7'>|</span>"
+   },
+	"custom/launcher": {
+      "format": " ",
+      "on-click": "sh ~/.config/waybar/scripts/launcher.sh",
+   },
+   "backlight": {
+      "device": "DP-1",
+      "format": "<span color='#FAC536'>{icon}</span>   {percent}%",
+      "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+      "on-click": "",
+   },
+   "tray": {
+      "icon-size": 20,
+      "spacing": 8
+   },
+   "hyprland/window": {
+      "format": "👉 {}",
+      "separate-outputs": true
+   },
+	"wlr/workspaces": {
+      "format": "{icon}",
+      "active-only": false,
+      "all-outputs": true,
+      "on-click": "activate",
+      "persistent_workspaces": {
+         "5": []
+      },
+      "format-icons": {
+         "1": "",
+         "2": "",
+         "3": "",
+         "4": "",
+         "5": "",
+         "urgent": "",
+         "active": "",
+         "default": ""
+      },
+      "sort-by-number": true
+   },
+   "temperature": {
+      "thermal-zone": 0,
+      "critical-threshold": 80,
+      "format-critical": "<span color='#FF7724'></span>  {temperatureC}°C",
+      "format": "<span color='#FF7724'></span>  {temperatureC}°C"
+   },
+	"battery": {
+		"states": {
+         "warning": 25,
+         "critical": 15
+      },
+		"format": "<span color='#AAD94C'>{icon}</span>    {capacity}%",
+		"format-charging": "<span color='#AAD94C'></span>  {capacity}%",
+		"format-full": "  full",
+		"format-plugged": "  {capacity}%",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"memory": {
+      "interval": 30,
+      "format-alt": "<span color='#2EA2DB'></span>   {}%",
+      "format":"<span color='#2EA2DB'></span>   {used:0.1f} GB",
+      "max-length": 10,
+   },
+   "cpu": {
+      "interval": 10,
+      "format": "<span color='#AAD94C'></span>    {}%",
+      "max-length": 10,
+      "on-click": "",
+   },
+   "disk": {
+      "format": "<span color='#F25056'>󰋊</span>  {percentage_used}%",
+      "tooltip": true,
+      "interval": 30
+   },
+	"clock": {
+		"format": "<span color='#2EA2DB'></span>   {:%I : %M %p}",
+		"format-alt": "<span color='#2EA2DB'></span>   {:%A, %d %b %Y}",
+      "tooltip-format": "<tt>{calendar}</tt>",
+	},
+	"network": {
+		"interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#92E7CB'></span>    {essid}",
+      "format-ethernet": "<span color='#92E7CB'></span> Wired",
+      "format-disconnected": "<span color='#92E7CB'></span>   Offline",
+      "on-click": "sh ~/.config/waybar/scripts/network.sh",
+   },
+	"custom/power-menu": {
+      "format": "⏻",
+      "on-click": "sh ~/.config/waybar/scripts/powermenu.sh",
+   },
+   "pulseaudio": {
+      "format": "<span color='#A282C7'>{icon}</span>    {volume}%",
+      "format-bluetooth": " ",
+      "format-bluetooth-muted": " ",
+      "tooltip": false,
+      "format-muted": "󰖁",
+      "format-icons": {
+         "headphone": "",
+         "hands-free": "",
+         "headset": "",
+         "phone": "",
+         "portable": "",
+         "car": "",
+         "default": ["", "󰕾", ""]
+      },
+    "on-click": "pavucontrol"
+  }
+}

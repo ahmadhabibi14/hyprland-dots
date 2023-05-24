@@ -26,7 +26,7 @@
 window:
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.75
+  opacity: 1.0
   #
   # Window dimensions (changes require restart)
   #
@@ -180,36 +180,34 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (One Dark)
-# https://github.com/joshdick/onedark.vim/blob/master/term/One%20Dark.alacritty
+# Colors (Ayu Dark)
 colors:
-    # Default colors
-    primary:
-      background: '0x1a1b26'
-#      background: '0x1a1a1a'
-      foreground: '0xefefef'
+  # Default colors
+  primary:
+    background: '0x0A0B11'
+    foreground: '0xe6e1cf'
 
-    # Normal colors
-    normal:
-      black:   '0x32344a'
-      red:     '0xf7768e'
-      green:   '0x9ece6a'
-      yellow:  '0xe0af68'
-      blue:    '0x7aa2f7'
-      magenta: '0xad8ee6'
-      cyan:    '0x449dab'
-      white:   '0x9699a8'
+  # Normal colors
+  normal:
+    black:   '0x0F1419'
+    red:     '0xF25056'
+    green:   '0xAAD94C'
+    yellow:  '0xFAC536'
+    blue:    '0x2EA2DB'
+    magenta: '0xA282C7'
+    cyan:    '0x92E7CB'
+    white:   '0xf2f2f2'
 
-    # Bright colors
-    bright:
-      black:   '0x444b6a'
-      red:     '0xff7a93'
-      green:   '0xb9f27c'
-      yellow:  '0xff9e64'
-      blue:    '0x7da6ff'
-      magenta: '0xbb9af7'
-      cyan:    '0x0db9d7'
-      white:   '0xacb0d0'
+  # Bright colors
+  bright:
+    black:   '0x0f1419'
+    red:     '0xF25056'
+    green:   '0xAAD94C'
+    yellow:  '0xFAC536'
+    blue:    '0x2EA2DB'
+    magenta: '0xA282C7'
+    cyan:    '0x92E7CB'
+    white:   '0xf2f2f2'
 
 # Bell
 #
