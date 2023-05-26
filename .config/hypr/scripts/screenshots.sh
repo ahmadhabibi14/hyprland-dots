@@ -1,1 +1,1 @@
-notify-send -u normal -i ~/.icons/Tela-ubuntu-dark/scalable/places/blue-folder-pictures.svg -t 2000 -a Screenshot 'Saved' 'Screenshot saved'
+dunstify -u normal -i ~/.icons/Tela-ubuntu-dark/scalable/places/blue-folder-pictures.svg -t 2000 -a Screenshot 'Screenshot' 'Picture saved'

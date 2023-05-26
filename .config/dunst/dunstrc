@@ -8,11 +8,11 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "#fffee3"
+    frame_color = "#595959"
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = JetBrains Mono NL SemiBold 10
+    font = Open Sans 10
     line_height = 0
     markup = full
     alignment = left
@@ -27,17 +27,17 @@
     title = Dunst
     class = Dunst
     corner_radius = 10
-    timeout = 2
+    timeout = 3
 
 [urgency_low]
     background = "#1e1e1e"
     foreground = "#fffee3"
 
 [urgency_normal]
-    background = "#1e1e1e"
-    foreground = "#fffee3"
+    background = "#0A0B11"
+    foreground = "#e6e1cf"
 
 [urgency_critical]
-    background = "#1E1E2E"
-    foreground = "#CDD6F4"
+    background = "#F25056"
+    foreground = "#0A0B11"
     frame_color = "#FAB387"

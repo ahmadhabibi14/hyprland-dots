@@ -1,4 +1,16 @@
-#!/bin/sh
-~/.config/hypr/scripts/hyprpicker --format hex | head -c -1 | wl-copy
-convert -size 100x100 xc:$(wl-paste) /tmp/color.png
-dunstify --icon=/tmp/color.png "$(wl-paste)"  "Copied to your clipboard!"
+#!/bin/bash
+
+# Start HyprPicker to select a color
+color=$(hyprpicker)
+
+# Check if a color was selected
+if [[ -n $color ]]; then
+    # Copy the color value to the clipboard using wl-copy
+    echo "$color" | wl-copy
+
+    # Show a notification using Dunst
+    dunstify -u normal -i ~/.icons/Tela-ubuntu-dark/scalable/apps/color.svg -t 2000 -a ColorPicker "$color"  "Copied to your clipboard!"
+else
+    # Show an error notification if no color was selected
+    dunstify -u critical -t 2000 "Color picking canceled!" "No color selected."
+fi

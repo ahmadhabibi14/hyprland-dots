@@ -15,14 +15,14 @@
 */
 
 * {
-  font-family: JetBrainsMono Nerd Font;
+  font-family: Open Sans;
   font-size: 14px;
 }
 
 window#waybar {
   background-color: #0A0B11;
   color: #f2f2f2;
-  border-bottom: 2px solid #FF7724;
+/*  border-bottom: 2px solid #FF7724;*/
   padding-left: 10px;
   font-size: 12px;
 }

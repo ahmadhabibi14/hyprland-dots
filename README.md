@@ -1,8 +1,8 @@
 # Hyprland Desktop Customization
 
-![My Dotties](/screenshots/003.png)
+![My Dotties](/screenshots/002.png)
 
-
+## Color Scheme: Ayu
 - Black `#0A0B11`
 - Dark Bright `#0F1419`
 - Dark Brighter `#1D242C`

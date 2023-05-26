@@ -63,8 +63,8 @@
       },
 		"format": "<span color='#AAD94C'>{icon}</span>    {capacity}%",
 		"format-charging": "<span color='#AAD94C'></span>  {capacity}%",
-		"format-full": "  full",
-		"format-plugged": "  {capacity}%",
+		"format-full": "<span color='#AAD94C'></span>  full",
+		"format-plugged": "<span color='#AAD94C'></span>  {capacity}%",
 		"format-icons": ["", "", "", "", ""]
 	},
 	"memory": {
@@ -95,6 +95,10 @@
       "format-wifi": "<span color='#92E7CB'></span>    {essid}",
       "format-ethernet": "<span color='#92E7CB'></span> Wired",
       "format-disconnected": "<span color='#92E7CB'></span>   Offline",
+      "tooltip-format": "{ifname}",
+      "tooltip-format-wifi": "<span color='#92E7CB'></span>    {essid} <span color='#C7C7C7'>|</span> <span color='#FAC536'>{signalStrength}%</span>",
+      "tooltip-format-ethernet": "{ifname} ",
+      "tooltip-format-disconnected": "Disconnected",
       "on-click": "sh ~/.config/waybar/scripts/network.sh || killall rofi",
    },
 	"custom/power-menu": {
