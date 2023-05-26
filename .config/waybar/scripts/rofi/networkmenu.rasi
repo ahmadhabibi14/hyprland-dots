@@ -22,7 +22,7 @@ window {
 	width:							350px;
     height:                         400px;
     location:                       center;
-    x-offset:                       420;
+    x-offset:                       380;
     y-offset:                       -134;
 }
 

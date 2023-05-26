@@ -16,6 +16,14 @@ chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selec
 # Get name of connection
 chosen_id=$(echo "${chosen_network:3}" | xargs)
 
+# enter_password() {
+# 	rofi -dmenu -no-fixed-num-lines -i -no-config -p "" -theme ~/.config/waybar/scripts/rofi/password.rasi	
+# }
+
+enter_password() {
+	rofi -dmenu -no-fixed-num-lines -i -no-config -p "" -theme ~/.config/waybar/scripts/rofi/password.rasi
+}
+
 if [ "$chosen_network" = " " ]; then
 	exit
 elif [ "$chosen_network" = "   Enable Wi-Fi" ]; then
@@ -33,10 +41,10 @@ else
 	# 	wifi_password=$(rofi -dmenu -no-config -i -no-fixed-num-lines -p "Password? : " -theme ~/.config/waybar/scripts/rofi/confirm.rasi)
 	# 	nmcli device wifi connect "$chosen_id" password "$wifi_password" | grep "successfully" && notify-send "Connection Established" "$success_message"
 	# fi
-	else
+	elif
 		secure_wifi=$(echo "$wifi_list" | grep -w "$chosen_id" | awk '//')
 		if [[ "$chosen_network" = "$secure_wifi" ]]; then
-			wifi_password=$(rofi -dmenu -p "Password: " -theme ~/.config/waybar/scripts/rofi/password.rasi)
+			wifi_password=$(enter_password &)
 		fi
 		nmcli device wifi connect "$chosen_id" password "$wifi_password" | grep "successfully" && notify-send "Connection Established" "$success_message"
 	fi

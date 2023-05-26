@@ -1,1 +1,1 @@
-grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'%s_screenshot.png') 
+notify-send -u normal -i ~/.icons/Tela-ubuntu-dark/scalable/places/blue-folder-pictures.svg -t 2000 -a Screenshot 'Saved' 'Screenshot saved'

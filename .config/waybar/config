@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-   "position": "bottom",
+   "position": "top",
 	"height": 40,
 	"spacing": 1,
 	"modules-left": ["custom/launcher", "custom/separator", "cpu", "disk", "memory", "backlight", "temperature",],
@@ -11,7 +11,7 @@
    },
 	"custom/launcher": {
       "format": " ",
-      "on-click": "sh ~/.config/waybar/scripts/launcher.sh",
+      "on-click": "sh ~/.config/waybar/scripts/launcher.sh || killall rofi",
    },
    "backlight": {
       "device": "DP-1",
@@ -30,9 +30,12 @@
 	"wlr/workspaces": {
       "format": "{icon}",
       "active-only": false,
-      "all-outputs": true,
       "on-click": "activate",
       "persistent_workspaces": {
+         "1": [],
+         "2": [],
+         "3": [],
+         "4": [],
          "5": []
       },
       "format-icons": {
@@ -92,7 +95,7 @@
       "format-wifi": "<span color='#92E7CB'></span>    {essid}",
       "format-ethernet": "<span color='#92E7CB'></span> Wired",
       "format-disconnected": "<span color='#92E7CB'></span>   Offline",
-      "on-click": "sh ~/.config/waybar/scripts/network.sh",
+      "on-click": "sh ~/.config/waybar/scripts/network.sh || killall rofi",
    },
 	"custom/power-menu": {
       "format": "⏻",
@@ -113,6 +116,6 @@
          "car": "",
          "default": ["", "󰕾", ""]
       },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol || killall pavucontrol"
   }
 }
