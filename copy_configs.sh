@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/zsh
+
+#	A script for automatically copies configs
+#	into local repository for this dotfile
 
 # Define the source and destination paths
 source_path="$HOME/.config"
@@ -12,6 +15,10 @@ folders=(
 	"hypr"
 	"waybar"
 	"dunst"
+	"kitty"
+	"neofetch"
+	"alacritty"
+	"cava"
 )  # Add the names of the folders you want to copy
 for folder in "${folders[@]}"; do
   cp -r "$source_path/$folder" "$destination_path"
