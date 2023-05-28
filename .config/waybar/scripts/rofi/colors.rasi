@@ -1,11 +1,24 @@
 /* colors */
 
 * {
-  al:   #0A0B11;
-  bg:   #0F1419;
-  bga:  #2EA2DB;
-  fg:   #f2f2f2;
-  ac:   #F25056;
-  se:   #AAD94C;
-  mg:   #FF7724;
+  al:               #0A0B11;
+  bg:               #0F1419;
+  bga:              #2EA2DB;
+  fg:               #f2f2f2;
+  ac:               #F25056;
+  se:               #AAD94C;
+  mg:               #FF7724;
+  background:       #0A0B11;
+  foreground:       #e6e1cf;
+  black-bright:     #0F1419;
+  red:              #F25056;
+  green:            #AAD94C;
+  yellow:           #FAC536;
+  blue:             #2EA2DB;
+  magenta:          #A282C7;
+  purple:           #CC24C9;
+  cyan:             #92E7CB;
+  white:            #f2f2f2;
+  gray:             #C7C7C7;
+  orange:           #FF7724;
 }

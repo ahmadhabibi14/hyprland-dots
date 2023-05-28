@@ -14,7 +14,7 @@ configuration {
 
 window {
     transparency:                   "real";
-    background-color:               @bg;
+    background-color:               rgba(10, 11, 17, 0.75);
     text-color:                     @fg;
 	border:							2px;
 	border-color:					@mg;
@@ -56,7 +56,7 @@ entry {
 
 inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
-    background-color:               @al;
+    background-color:               transparent;
     text-color:                     @fg;
     expand:                         false;
 	/* border:							0px 0px 1px 0px; */
@@ -67,7 +67,7 @@ inputbar {
 }
 
 listview {
-    background-color:               @al;
+    background-color:               transparent;
     padding:                        0px;
     columns:                        1;
     lines:                          5;
@@ -78,7 +78,7 @@ listview {
 }
 
 mainbox {
-    background-color:               @al;
+    background-color:               transparent;
 	border:							0px;
     border-radius:                  0px;
 	border-color:					@ac;
@@ -88,7 +88,7 @@ mainbox {
 }
 
 element {
-    background-color:               @al;
+    background-color:               transparent;
     text-color:                     @fg;
     orientation:                    horizontal;
     border-radius:                  0px;

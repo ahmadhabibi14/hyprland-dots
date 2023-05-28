@@ -23,16 +23,21 @@ window#waybar {
   background-color: #0A0B11;
   color: #f2f2f2;
 /*  border-bottom: 2px solid #FF7724;*/
-  padding-left: 10px;
-  font-size: 12px;
 }
 
 window#waybar.hidden {
   opacity: 0.2;
 }
 
+#workspaces {
+  background-color: #2E2F33;
+  border-radius: 0 9999px 9999px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 #workspaces button {
-  color: #C7C7C7;
+  color: #FFFFFF;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -41,9 +46,9 @@ window#waybar.hidden {
   color: #A282C7;
 }
 
-#workspaces button.active {
+/*#workspaces button.active {
   color: #FF7724;
-}
+}*/
 
 #workspaces button.urgent {
   background-color: #FF7724;
@@ -72,31 +77,83 @@ window#waybar.hidden {
 }
 
 #custom-launcher {
+  background-color: #2E2F33;
+  border-radius: 9999px 0 0 9999px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 8px;
   font-size: 17px;
-  color: #A282C7;
+  color: #2EA2DB;
   padding-left: 13px;
 }
 
 #custom-power-menu {
+  background-color: #2E2F33;
+  border-radius: 0 9999px 9999px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 8px;
   font-size: 17px;
   color: #F25056;
-  padding-right: 15px;
+  padding-right: 16px;
 }
 
 #network {
-  
+  background-color: #2E2F33;
+  border-radius: 9999px 0 0 9999px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#pulseaudio {
+  background-color: #A282C7;
+  color: #0A0B11;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#battery {
+  background-color: #AAD94C;
+  color: #0A0B11;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#backlight {
+  background-color: #FAC536;
+  color: #0A0B11;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#disk {
+  background-color: #F25056;
+  color: #0A0B11;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #cpu {
-  
+  background-color: #FF7724;
+  color: #0A0B11;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 999px 0 0 999px; 
 }
 
 #memory {
-  
+  background-color: #92E7CB;
+  color: #0A0B11;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #clock {
-  
+  background-color: #2EA2DB;
+  color: #0A0B11;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 0 999px 999px 0;
 }
 
 
