@@ -1,5 +1,5 @@
 configuration {
-	font:							"Open Sans 10";
+	font:							"CaskaydiaCove Nerd Font SemiLight 10";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-dmenu: 					" ";
@@ -23,7 +23,7 @@ window {
     height:                         400px;
     location:                       center;
     x-offset:                       380;
-    y-offset:                       -134;
+    y-offset:                       -132;
 }
 
 prompt {

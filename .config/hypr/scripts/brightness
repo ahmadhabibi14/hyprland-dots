@@ -1,0 +1,18 @@
+#!/bin/sh
+
+down() {
+  brightness=$(light -g)
+  brightnessctl set 5%-
+  dunstify -u normal -i ~/.icons/Tela-ubuntu-dark/24/actions/whitebalance.svg -h int:value:"$brightness" -a Brightness "Brightness" "Decreasing to $brightness%" -r 2593
+}
+
+up() {
+  brightness=$(light -g)
+  brightnessctl set +5%
+  dunstify -u normal -i ~/.icons/Tela-ubuntu-dark/24/actions/whitebalance.svg -h int:value:"$brightness" -a Brightness "Brightness" "Increasing to $brightness%" -r 2593
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+esac

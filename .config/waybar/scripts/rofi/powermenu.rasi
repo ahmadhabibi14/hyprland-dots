@@ -1,5 +1,5 @@
 configuration {
-	font:							"JetBrainsMonoNL Nerd Font 10";
+	font:							"CaskaydiaCove Nerd Font SemiLight 10";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
@@ -14,7 +14,7 @@ configuration {
 
 window {
     transparency:                   "real";
-    background-color:               rgba(10, 11, 17, 0.75);
+    background-color:               rgba(10, 11, 17, 1.0);
     text-color:                     @fg;
 	border:							2px;
 	border-color:					@mg;

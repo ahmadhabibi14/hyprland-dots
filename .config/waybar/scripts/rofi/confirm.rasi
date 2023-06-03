@@ -5,7 +5,7 @@
 * {
     background-color:       @bg;
     text-color:             @fg;
-	font:				 	"Open Sans 10";
+	font:				 	"CaskaydiaCove Nerd Font SemiLight 10";
 }
 
 window {

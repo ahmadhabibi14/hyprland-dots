@@ -1,5 +1,5 @@
 configuration {
-	font:							"Open Sans 10";
+	font:							"CaskaydiaCove Nerd Font SemiLight 10";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
@@ -79,7 +79,7 @@ listview {
 }
 
 mainbox {
-    background-color:               rgba(10, 11, 17, 0.75);
+    background-color:               rgba(10, 11, 17, 1.0);
 	border:							0px;
     border-radius:                  2px;
 	border-color:					@ac;

@@ -15,8 +15,8 @@
 */
 
 * {
-  font-family: Open Sans;
-  font-size: 14px;
+  font-family: "CaskaydiaCove Nerd Font", sans-serif;
+  font-size: 13px;
 }
 
 window#waybar {
@@ -30,10 +30,11 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  background-color: #2E2F33;
-  border-radius: 0 9999px 9999px 0;
+  background-color: #1f2530;
+  border-radius: 0 8px 8px 0;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding-right: 5px;
 }
 
 #workspaces button {
@@ -77,8 +78,8 @@ window#waybar.hidden {
 }
 
 #custom-launcher {
-  background-color: #2E2F33;
-  border-radius: 9999px 0 0 9999px;
+  background-color: #1f2530;
+  border-radius: 8px 0 0 8px;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 8px;
@@ -88,8 +89,8 @@ window#waybar.hidden {
 }
 
 #custom-power-menu {
-  background-color: #2E2F33;
-  border-radius: 0 9999px 9999px 0;
+  background-color: #1f2530;
+  border-radius: 0 8px 8px 0;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 8px;
@@ -99,61 +100,61 @@ window#waybar.hidden {
 }
 
 #network {
-  background-color: #2E2F33;
-  border-radius: 9999px 0 0 9999px;
+  background-color: #1f2530;
+  border-radius: 8px 0 0 8px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #pulseaudio {
-  background-color: #A282C7;
-  color: #0A0B11;
+/*  color: #A282C7;*/
+  background-color: #1f2530;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #battery {
-  background-color: #AAD94C;
-  color: #0A0B11;
+/*  color: #AAD94C;*/
+  background-color: #1f2530;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #backlight {
-  background-color: #FAC536;
-  color: #0A0B11;
+/*  color: #FAC536;*/
+  background-color: #1f2530;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #disk {
-  background-color: #F25056;
-  color: #0A0B11;
+/*  color: #F25056;*/
+  background-color: #1f2530;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #cpu {
-  background-color: #FF7724;
-  color: #0A0B11;
+/*  color: #FF7724;*/
+  background-color: #1f2530;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 999px 0 0 999px; 
+  border-radius: 8px 0 0 8px; 
 }
 
 #memory {
-  background-color: #92E7CB;
-  color: #0A0B11;
+/*  color: #92E7CB;*/
+  background-color: #1f2530;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #clock {
-  background-color: #2EA2DB;
-  color: #0A0B11;
+/*  color: #2EA2DB;*/
+  background-color: #1f2530;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 0 999px 999px 0;
+  border-radius: 0 8px 8px 0;
 }
 
 

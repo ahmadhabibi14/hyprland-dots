@@ -1,0 +1,34 @@
+#!/bin/sh
+
+down() {
+pamixer -d 2
+volume=$(pamixer --get-volume)
+[$volume -gt 0 ] && volume=`expr $volume`  
+dunstify -a volume "Volume" "Decreasing to $volume%" -h int:value:"$volume" -i ~/.icons/Tela-ubuntu-dark/24/devices/audio-speakers.svg -r 2593 -u normal
+canberra-gtk-play -i audio-volume-change -d "changevolume"
+}
+
+up() {
+pamixer -i 2
+volume=$(pamixer --get-volume)
+[ $volume -lt 100 ] && volume=`expr $volume`  
+dunstify -a volume "Volume" "Increasing to $volume%" -h int:value:"$volume" -i ~/.icons/Tela-ubuntu-dark/24/devices/audio-speakers.svg -r 2593 -u normal
+canberra-gtk-play -i audio-volume-change -d "changevolume"
+}
+
+mute() {
+muted="$(pamixer --get-mute)"
+if $muted; then
+  pamixer -u
+  dunstify -a "VOLUME" "UNMUTED" -i audio-volume-high-symbolic -r 2593 -u normal
+else 
+  pamixer -m
+  dunstify -a "VOLUME" "MUTED" -i audio-volume-muted-symbolic -r 2593 -u normal
+fi
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+  mute) mute;;
+esac

@@ -1,14 +1,5 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
-
 configuration {
-	font:							"Iosevka Nerd Font 10";
+	font:							"CaskaydiaCove Nerd Font SemiLight 10";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
