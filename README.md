@@ -1,6 +1,6 @@
 # Hyprland Desktop Customization
 
-![My Dotties](/screenshots/MyHyprlandRice_v2.png)
+![My Dotties](/screenshots/IMG_20230904_071931_904.png)
 
 ## Color Scheme: Ayu
 - Black `#0A0B11`
